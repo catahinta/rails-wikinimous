@@ -1,5 +1,13 @@
-<h1><%= @article.title %></h1>
-<%= link_to "Edit article", edit_article_path(@article) %>
-<%= link_to "Delete article", article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-<p><%= @article.content %></p>
-<%= link_to "Back to articles", articles_path %>
+<div class="container my-5">
+  <div class="d-flex">
+    <h1><%= @article.title %></h1>
+    <%= link_to edit_article_path(@article), :class => "fs-3" do %>
+      <i class="fa-regular fa-pen-to-square"></i>
+    <% end %>
+    <%= link_to article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, :class => "fs-3" do %>
+      <i class="fa-regular fa-trash-can"></i>
+    <% end %>
+  </div>
+  <p><%= @article.content %></p>
+  <%= link_to "Back to articles", articles_path, :class => "btn btn-outline-primary" %>
+</div>

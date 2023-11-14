@@ -8,5 +8,5 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 10.times do
-  Article.create(title: Faker::Movies::HitchhikersGuideToTheGalaxy.planet, content: Faker::Movies::HitchhikersGuideToTheGalaxy.quote)
+  Article.create(title: Faker::TvShows::TheITCrowd.character, content: Faker::TvShows::TheITCrowd.quote)
 end
